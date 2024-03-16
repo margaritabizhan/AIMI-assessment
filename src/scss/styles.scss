@@ -1,0 +1,60 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Container and Row */
+.container {
+  max-width: 1300px;
+  margin: auto;
+  margin-top: 3%;
+}
+
+/* Row */
+.row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Image Checkbox Label */
+  .image-checkbox {
+    display: block;
+    position:relative;
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
+  }
+
+/* Invisible Checkbox */
+.image-checkbox-input {
+  opacity: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  cursor: pointer;
+}
+
+/* Image Background */
+.image-background {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center the image properly */
+  width: 97%;
+  height: 97%;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.2s ease;
+}
+
+/* Checkbox Checked State */
+.image-checkbox-input:checked + .image-background {
+  outline: 5px solid #f60062; 
+}
+
+
